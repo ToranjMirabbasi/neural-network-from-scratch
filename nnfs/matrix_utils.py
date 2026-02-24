@@ -1,9 +1,12 @@
 import numpy as np
+
 def dot(a, b):
-    """
-    Computes dot product between two vectors.
-    """
-    return np.dot(a, b)
+    dot_result = 0
+    if len(a) != len(b):
+        raise ValueError("Dot product is undefined for vectors of different lengths")
+    else:
+        dot_result = sum(np.multiply(a, b))
+    return dot_result
 
 def matmul(A, B):
     """
@@ -20,4 +23,6 @@ def add_bias(X, b):
 if __name__ == "__main__":
     A = np.array([[1, 2], [3, 4]])
     B = np.array([[5, 6], [7, 8]])
-    print(matmul(A, B))
+    a = [1, 0]
+    b = [0, 1]
+    print(dot(a, b))

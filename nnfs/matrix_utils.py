@@ -23,6 +23,6 @@ def add_bias(X, b):
 if __name__ == "__main__":
     A = np.array([[1, 2], [3, 4]])
     B = np.array([[5, 6], [7, 8]])
-    a = [1, 0]
-    b = [0, 1]
+    a = [1, 2]
+    b = [2, 1]
     print(dot(a, b))
